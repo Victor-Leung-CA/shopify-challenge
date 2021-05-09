@@ -12,3 +12,5 @@
 - Movies in search results can be added and removed from the nomination list.
 - If a search result has already been nominated, nominate button is disabled.
 - A simple banner is displayed when the user has 5 nominations.
+
+![Website Screenshot](https://github.com/Victor-Leung-CA/shopify-challenge/blob/main/website-screenshot.png)
