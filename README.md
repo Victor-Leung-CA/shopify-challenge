@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3435cf9d-2970-41a4-bd52-a0d9b88fbd45/deploy-status)](https://app.netlify.com/sites/victor-leung-shopify-challenge/deploys)
 
-# Shopify front end challenge
+# Shopify Front-end Challenge - Fall 20201
 
 ## Extra Features
 - Local caching of website
