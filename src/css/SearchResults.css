@@ -5,6 +5,8 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 40%;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px -3px rgb(189, 190, 189);
 }
 
 .SearchResultsButton{
@@ -16,6 +18,10 @@
     cursor: pointer;
 }
 
+.SearchResultsHeading{
+    color: rgb(0, 66, 0);
+}
+
 .SearchResultsButton:disabled{
     pointer-events: none;
     background-color: rgb(168, 168, 168);
@@ -25,7 +31,6 @@
     color: white;
     display: inline;
 }
-
 
 .SearchResultsButton:hover{
     background-color: green;

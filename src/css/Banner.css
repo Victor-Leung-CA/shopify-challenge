@@ -3,7 +3,12 @@
     max-width: 1400px;
     padding: 2rem 0;
     margin: auto;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     text-align: center;
     border-radius: 1rem;
+    box-shadow: 0 0 10px -3px rgb(189, 190, 189);
+}
+
+.bannerText{
+    font-weight: 300;
 }

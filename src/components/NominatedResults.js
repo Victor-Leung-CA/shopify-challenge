@@ -5,7 +5,7 @@ const NominatedResults = (props) => {
 
     return (
         <div className="nominatedResultsContainer">
-            <h3>Nominated Movies</h3>
+            <h3 className="NominatedResultsHeading">Nominated Movies</h3>
             <ul>
                 {props.nominatedMovies.map(movie => {
                     return(

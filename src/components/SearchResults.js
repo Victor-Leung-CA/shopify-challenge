@@ -6,7 +6,7 @@ const SearchResults = (props) => {
 
     return (
     <div className="SearchResultsContainer">
-        {props.movies.length > 0 && <h3>Search results for "{props.searchInput}"</h3>}
+        {props.movies.length > 0 && <h3 className="SearchResultsHeading">Search results for "{props.searchInput}"</h3>}
         <ul>
         {props.movies.map((movie,index) => {
             return(

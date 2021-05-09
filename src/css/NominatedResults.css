@@ -2,9 +2,15 @@
     background-color: rgb(247, 247, 247);
     border-radius: 1rem;
     padding: 2rem;
+    margin-bottom: 2rem;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 40%;
+    box-shadow: 0 0 10px -3px rgb(189, 190, 189);
+}
+
+.NominatedResultsHeading{
+    color: rgb(0, 66, 0);
 }
 
 .NominatedResultsList{
