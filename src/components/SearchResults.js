@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/SearchResults.css'
+import tick from '../images/tick.svg'
 
 const SearchResults = (props) => {
 
@@ -7,11 +8,15 @@ const SearchResults = (props) => {
     <div className="SearchResultsContainer">
         {props.movies.length > 0 && <h3>Search results for "{props.searchInput}"</h3>}
         <ul>
-        {props.movies.map(movie => {
+        {props.movies.map((movie,index) => {
             return(
                 <li key={movie.imdbID}>
-                    <p className="SearchResultsMovieTitle">{movie.Title} ({movie.Year})</p>
-                    <button className="SearchResultsButton" onClick={() => props.nominateMovie(movie.Title, movie.Year)}>Nominate</button>
+                    <p className="SearchResultsMovieTitle">{movie.title} ({movie.year})</p>
+                    {!props.showBanner && 
+                    <button disabled={props.movies[index].nomination} className="SearchResultsButton" onClick={() => props.nominateMovie(movie.title, movie.year, movie.imdbID)}>
+                        <img className="SearchResultsTick" src={tick} />
+                        <p> Nominate</p>
+                    </button>}
                 </li>
             )
         })}

@@ -1,0 +1,30 @@
+.nominatedResultsContainer{
+    background-color: rgb(247, 247, 247);
+    border-radius: 1rem;
+    padding: 2rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 40%;
+}
+
+.NominatedResultsList{
+    display: inline;
+}
+
+.NominatedResultsButton{
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    background-color: #c8534f;
+    border: none;
+    cursor: pointer;
+}
+
+.NominatedResultsButton:hover{
+    background-color: rgb(167, 17, 17);
+}
+
+.NominatedResultsButton p{
+    color: white;
+    display: inline;    
+}

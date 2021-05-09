@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+//Fetch movies from OMDb API
 const getMovies = async (searchInput) => {
     try {
         const response = await axios.get('http://www.omdbapi.com/?apikey=ec0365e3&s=' + searchInput);
