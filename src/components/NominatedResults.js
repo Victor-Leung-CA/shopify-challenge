@@ -9,9 +9,9 @@ const NominatedResults = (props) => {
             <ul>
                 {props.nominatedMovies.map(movie => {
                     return(
-                        <li key={movie.title}>
-                            <p className="NominatedResultsList">{movie.title}, {movie.year}</p>
-                            <button className="NominatedResultsButton" onClick={() => props.removeNomination(movie.title)}>
+                        <li key={movie.title + movie.year}>
+                            <p className="NominatedResultsList">{movie.title} ({movie.year})</p>
+                            <button className="NominatedResultsButton" onClick={() => props.removeNomination(movie.title, movie.year)}>
                                 <p> Remove</p>
                             </button>
                         </li>

@@ -10,7 +10,7 @@ const SearchResults = (props) => {
         <ul>
         {props.movies.map((movie,index) => {
             return(
-                <li key={movie.imdbID}>
+                <li key={movie.imdbID + movie.year}>
                     <p className="SearchResultsMovieTitle">{movie.title} ({movie.year})</p>
                     {!props.showBanner && 
                     <button disabled={props.movies[index].nomination} className="SearchResultsButton" onClick={() => props.nominateMovie(movie.title, movie.year, movie.imdbID)}>

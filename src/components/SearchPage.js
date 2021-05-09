@@ -52,31 +52,32 @@ const SearchPage = () => {
         //Check if there are 5 nominated movies
         if(showBanner === false){
             //Add to nominated movie list
-            let duplicateMovie = nominatedMovies.find(movie => movie.title === movieTitle);
+            let duplicateMovie = nominatedMovies.find(movie => movie.title === movieTitle && movie.year === movieYear);
+
+            //Add to nominated results if not a duplicate movie
             if(duplicateMovie === undefined){
+                //Add nominated movie to list
                 setNominatedMovies([...nominatedMovies, {title: movieTitle, year: movieYear, imdbID: imdbID}]);
+
+                 //Disable button
+                let searchMoviesIndex = searchedMovies.findIndex(movie => movie.title === movieTitle && movie.year === movieYear);
+                let searchedMoviesTemp = [...searchedMovies];
+                searchedMoviesTemp[searchMoviesIndex].nomination = true;
+                setSearchedMovies(searchedMoviesTemp);
+
+                //If nominated movies reaches 5, show banner
+                if(nominatedMovies.length === 4){
+                    setShowBanner(true);
+                }
             }
-
-            //Disable button
-            let searchMoviesIndex = searchedMovies.findIndex(movie => movie.title === movieTitle);
-            let searchedMoviesTemp = [...searchedMovies];
-            searchedMoviesTemp[searchMoviesIndex].nomination = true;
-            setSearchedMovies(searchedMoviesTemp);
-
-            //If nominated movies reaches 5, show banner
-            if(nominatedMovies.length === 4){
-                setShowBanner(true);
-            }
-
-          
         }
     }
 
     //Remove movie nomination
-    const removeNomination = (movieTitle) =>{
+    const removeNomination = (movieTitle, movieYear) =>{
 
         //Remove movie from nomination list
-        let removeNominationIndex = nominatedMovies.findIndex(movie => movie.title === movieTitle);
+        let removeNominationIndex = nominatedMovies.findIndex(movie => movie.title === movieTitle && movie.year === movieYear);
             if(removeNominationIndex > -1){
                 let nominatedMoviesTemp = [...nominatedMovies];
                 nominatedMoviesTemp.splice(removeNominationIndex, 1);
@@ -84,7 +85,7 @@ const SearchPage = () => {
                 setShowBanner(false);
 
                 //Undisable button
-                let searchMoviesIndex = searchedMovies.findIndex(movie => movie.title === movieTitle);
+                let searchMoviesIndex = searchedMovies.findIndex(movie => movie.title === movieTitle && movie.year === movieYear);
                 if(searchMoviesIndex > -1){
                     let searchedMoviesTemp = [...searchedMovies];
                     searchedMoviesTemp[searchMoviesIndex].nomination = false;
