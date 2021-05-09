@@ -12,7 +12,7 @@ const SearchBar = (props) => {
 
     return (
     <div className="SearchBarContainer">
-        <h3>Nominate your favourite movies!</h3>
+        <h3 className = "SearchBarHeader">Nominate your favourite movies!</h3>
         <div>
             <input className="searchBar" placeholder="Search for movies..." type="text" onChange={props.updateSearch} onKeyDown={handleKeyDown}/>
             <button className="SearchBarButton" onClick={props.handleSearch}><img src={SearchIcon} className="SearchBarIcon"/></button>

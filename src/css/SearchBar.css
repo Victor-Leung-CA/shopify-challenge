@@ -5,6 +5,10 @@
     padding-bottom: 3rem;
 }
 
+.SearchBarHeader{
+    font-weight: 300;
+}
+
 .searchBar{
     padding: 0.5rem;
     padding-left: 1rem;
@@ -28,6 +32,7 @@ input:focus{
     margin-left: -2rem;
     background-color:transparent;
     border: none;
+    cursor: pointer;
 }
 
 .SearchBarIcon{

@@ -1,16 +1,39 @@
 .SearchPageContainer{
-    padding: 3rem;
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
+    max-height: 100vh;
+    background-image: url("../images/search-background.svg");
+    background-size: 100% 100%;
+    padding: 3rem 2rem;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    height: 100%;
 }
 
 .SearchPageTitle{
     text-align: center;
+    color: rgb(0, 53, 0);
 }
 
 .SearchPageMovies{
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     flex-direction: row;
-    width: 100%;
+    max-width: 1400px;
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0;
 }
+
+li{
+    margin: 0.7rem 0;
+}
+
+p{
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+    .SearchPageMovies{
+    width: 95%;
+    }
+  }
