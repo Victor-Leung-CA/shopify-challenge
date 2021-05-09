@@ -39,7 +39,7 @@ input:focus{
     height: 1rem;
     width: auto;
     margin: -0.2rem;
-    opacity: 40%;
+    opacity: 0.4;
 }
 
 .SearchBarIcon:hover{
